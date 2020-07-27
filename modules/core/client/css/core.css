@@ -33,3 +33,7 @@ a:hover .header-profile-image {
   padding-top: 11px !important;
   padding-bottom: 11px !important;
 }
+.bible4kidsnavbar {
+  background-color: wheat;
+  height: 60px;
+}
