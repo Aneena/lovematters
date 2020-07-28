@@ -9,7 +9,7 @@ module.exports = {
   },
   port: process.env.PORT || 3000,
   templateEngine: 'swig',
-  sessionSecret: 'MEAN',
+  sessionSecret: 'BIBLE4KIDS',
   sessionCollection: 'sessions',
   logo: 'modules/core/img/brand/bible4kidslogo.png',
   favicon: 'modules/core/img/brand/favicon.ico'

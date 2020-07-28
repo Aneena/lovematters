@@ -4,7 +4,7 @@ var defaultEnvConfig = require('./default');
 
 module.exports = {
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/bible4kids',
+    uri: 'mongodb://localhost/bible4kids',
     options: {
       user: '',
       pass: ''
@@ -14,7 +14,7 @@ module.exports = {
   },
   log: {
     // Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
-    format: 'dev',
+    format: 'combined',
     // Stream defaults to process.stdout
     // Uncomment to enable logging to a log on the file system
     options: {
@@ -22,7 +22,7 @@ module.exports = {
     }
   },
   app: {
-    title: defaultEnvConfig.app.title + ' - Development Environment'
+    title: defaultEnvConfig.app.title
   },
   facebook: {
     clientID: process.env.FACEBOOK_ID || 'APP_ID',
@@ -43,17 +43,6 @@ module.exports = {
     clientID: process.env.LINKEDIN_ID || 'APP_ID',
     clientSecret: process.env.LINKEDIN_SECRET || 'APP_SECRET',
     callbackURL: '/api/auth/linkedin/callback'
-  },
-  github: {
-    clientID: process.env.GITHUB_ID || 'APP_ID',
-    clientSecret: process.env.GITHUB_SECRET || 'APP_SECRET',
-    callbackURL: '/api/auth/github/callback'
-  },
-  paypal: {
-    clientID: process.env.PAYPAL_ID || 'CLIENT_ID',
-    clientSecret: process.env.PAYPAL_SECRET || 'CLIENT_SECRET',
-    callbackURL: '/api/auth/paypal/callback',
-    sandbox: true
   },
   mailer: {
     from: process.env.MAILER_FROM || 'MAILER_FROM',
