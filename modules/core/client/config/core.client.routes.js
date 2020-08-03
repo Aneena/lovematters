@@ -9,6 +9,18 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 
     // Home state routing
     $stateProvider
+      .state('viewactivity', {
+        url: '/activity/:activityId',
+        templateUrl: 'modules/core/views/viewactivity.client.view.html',
+        controller: 'ActivitiesController',
+        controllerAs: 'vm'
+      })
+      .state('activities', {
+        url: '/activityList',
+        templateUrl: 'modules/core/views/activities.client.view.html',
+        controller: 'ActivitiesController',
+        controllerAs: 'vm'
+      })
       .state('home', {
         url: '/',
         templateUrl: 'modules/core/views/home.client.view.html'
